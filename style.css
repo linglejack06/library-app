@@ -6,3 +6,6 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 11px;
 }
+.popup-form {
+    display: none;
+}
