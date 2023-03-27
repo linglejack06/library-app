@@ -14,31 +14,43 @@
     </header>
     <main>
         <div class="top">
-            <h3 id="books-read">0 Books Read</h3>
-            <button id="add-book">Add New Book</button>
-            <form class="popup-form">
-                <h2>New Book</h2>
-                <label for="title">Title: </label>
-                <input type="text" id="title" placeholder="The Hobbit" required>
-                <label for="author">Author: </label>
-                <input type="text" id="author" placeholder="C.S. Lewis" required>
-                <label for="pages">Pages: </label>
-                <input type="number" id="pages" placeholder="512" required>
-                <label for="read">Have you read it?</label>
-                <select name="isRead" id="read-status" required>
-                    <option value="0">
-                        Not Read
-                    </option>
-                    <option value="1">
-                        Read
-                    </option>
-                </select>
-                <button type="submit">Add Book To Library</button>
-                <button type="button" class="cancel-btn">Close</button>
-            </form>
+            <h3 id="books-read" class="library-head">0 Books Read</h3>
+            <button id="add-book" class="add-book">Add New Book</button>
+            <div class="form-container">
+                <div class="form-background">
+                    <form class="popup-form">
+                        <h2>New Book</h2>
+                        <div class="input-container">
+                            <label for="title">Title: </label>
+                            <input type="text" id="title" placeholder="The Hobbit" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="author">Author: </label>
+                            <input type="text" id="author" placeholder="C.S. Lewis" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="pages">Pages: </label>
+                            <input type="number" id="pages" placeholder="512" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="read">Have you read it?</label>
+                            <select name="isRead" id="read-status" required>
+                                <option value="0">
+                                    Not Read
+                                </option>
+                                <option value="1">
+                                    Read
+                                </option>
+                            </select>
+                        </div>
+                        <button type="submit">Add Book To Library</button>
+                        <button type="button" class="cancel-btn">Close</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="library">
-            
+
         </div>
     </main>
 </body>

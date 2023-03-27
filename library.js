@@ -2,6 +2,7 @@
 const myLibrary = [];
 const library = document.querySelector('.library');
 const form = document.querySelector('.popup-form');
+const formContainer = document.querySelector('.form-container');
 const formBtn = document.getElementById('add-book');
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
@@ -86,10 +87,10 @@ form.addEventListener('submit', (e) => {
 });
 closeFormBtn.addEventListener('click', () => {
     // hides form so it disappears
-    form.style.display = 'none';
+    formContainer.style.display = 'none';
 })
 formBtn.addEventListener('click', () => {
-    form.style.display = 'block';
+    formContainer.style.display = 'block';
 });
 const book = new Book('The Hobbit', 'C.S Lewis', 400, '1');
 book.createBookCard();
