@@ -9,3 +9,21 @@
 .popup-form {
     display: none;
 }
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.library {
+    border: 2px solid black;
+    height: 100vh;
+    margin: 16px;
+    padding: 16px;
+}
