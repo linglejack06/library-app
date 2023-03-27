@@ -73,8 +73,17 @@ function addBook(e) {
     book.createBookCard();
 }
 
+function clearForm() {
+    titleInput.value = '';
+    authorInput.value = '';
+    pageInput.value = 0;
+    form.style.display = 'none';
+}
 
-form.addEventListener('submit', addBook);
+form.addEventListener('submit', (e) => {
+    addBook(e);
+    clearForm();
+});
 closeFormBtn.addEventListener('click', () => {
     // hides form so it disappears
     form.style.display = 'none';
