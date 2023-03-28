@@ -91,6 +91,9 @@ form.addEventListener('submit', (e) => {
     addBook(e);
     clearForm();
 });
+form.addEventListener('click', (e) => {
+    e.stopPropagation();
+})
 closeFormBtn.addEventListener('click', () => {
     // hides form so it disappears
     formContainer.style.display = 'none';
@@ -99,4 +102,8 @@ closeFormBtn.addEventListener('click', () => {
 formBtn.addEventListener('click', () => {
     formContainer.style.display = 'block';
 });
+
+formContainer.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+})
 
