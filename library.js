@@ -6,9 +6,11 @@ const formContainer = document.querySelector('.form-container');
 const formBtn = document.getElementById('add-book');
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
+const booksRead = document.getElementById('books-read');
 const pageInput = document.getElementById('pages');
 const isRead = document.getElementById('read-status');
 const closeFormBtn = document.querySelector('.cancel-btn');
+let bookNumber = 0;
 
 // MARK: book constructor + functions
 function Book(title, author, pages, read) {
@@ -35,6 +37,8 @@ Book.prototype.createBookCard = function createBookCard() {
     deleteButton.classList.add('red-btn');
     deleteButton.addEventListener('click', () => {
         library.removeChild(card);
+        bookNumber -= 1;
+        booksRead.textContent = `${bookNumber} Books Read`
     });
 
     const isReadButton = document.createElement('button');
@@ -63,6 +67,8 @@ Book.prototype.createBookCard = function createBookCard() {
 Book.prototype.addToLibrary = function addToLibrary() {
     // adds this(book) to array
     myLibrary.push(this);
+    bookNumber += 1;
+    booksRead.textContent = `${bookNumber} Books Read`;
 }
 
 
@@ -78,7 +84,7 @@ function clearForm() {
     titleInput.value = '';
     authorInput.value = '';
     pageInput.value = 0;
-    form.style.display = 'none';
+    formContainer.style.display = 'none';
 }
 
 form.addEventListener('submit', (e) => {
@@ -92,5 +98,4 @@ closeFormBtn.addEventListener('click', () => {
 formBtn.addEventListener('click', () => {
     formContainer.style.display = 'block';
 });
-const book = new Book('The Hobbit', 'C.S Lewis', 400, '1');
-book.createBookCard();
+
