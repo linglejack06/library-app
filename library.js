@@ -57,8 +57,8 @@ Book.prototype.createBookCard = function createBookCard() {
     card.appendChild(bookTitle);
     card.appendChild(bookAuthor);
     card.appendChild(bookPages);
-    card.appendChild(deleteButton);
     card.appendChild(isReadButton);
+    card.appendChild(deleteButton);
     card.classList.add('book-card');
     card.dataset.index = myLibrary.indexOf(this);
     library.appendChild(card);
@@ -83,7 +83,7 @@ function addBook(e) {
 function clearForm() {
     titleInput.value = '';
     authorInput.value = '';
-    pageInput.value = 0;
+    pageInput.value = null;
     formContainer.style.display = 'none';
 }
 
@@ -94,6 +94,7 @@ form.addEventListener('submit', (e) => {
 closeFormBtn.addEventListener('click', () => {
     // hides form so it disappears
     formContainer.style.display = 'none';
+    clearForm();
 })
 formBtn.addEventListener('click', () => {
     formContainer.style.display = 'block';
